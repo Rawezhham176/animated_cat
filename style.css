@@ -1,0 +1,261 @@
+* {
+  cursor: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(13, 16, 66);
+  text-align: center;
+  justify-content: center;
+}
+
+.container {
+  border: 1px solid white;
+  width: 1040px;
+  height: 800px;
+  position: absolute;
+  left: 30%;
+  top: 30%;
+}
+
+.cat {
+  text-align: center;
+  justify-content: center;
+}
+
+@keyframes body_a {
+  50% {
+    transform: scaleX(0.91);
+  }
+}
+
+.body {
+  background-color: rgb(201, 78, 40);
+  width: 400px;
+  height: 230px;
+  position: absolute;
+  border-radius: 150px 150px 0 0;
+  left: 30%;
+  top: 30%;
+  transform-origin: right;
+  animation-name: body_a;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: backwards;
+}
+
+@keyframes feet_a {
+  50% {
+    left: 37%;
+  }
+}
+
+.feet {
+  background-color: rgb(153, 65, 49);
+  width: 100px;
+  height: 68px;
+  position: absolute;
+  border-radius: 80px;
+  left: 36%;
+  top: 51%;
+  transform-origin: right;
+  animation-name: feet_a;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: backwards;
+}
+
+.feet::after {
+  content: "";
+  background-color: rgb(153, 65, 49);
+  width: 100px;
+  height: 68px;
+  position: absolute;
+  border-radius: 80px;
+  transform: translateX(90px);
+}
+
+.head {
+  background-color: rgb(201, 78, 40);
+  width: 170px;
+  height: 121px;
+  position: absolute;
+  border-radius: 80px 80px 0 0;
+  left: 67%;
+  top: 43.5%;
+}
+
+.head_shadow {
+  background-color: rgb(22, 8, 4, 0.3);
+  width: 170px;
+  height: 120px;
+  position: absolute;
+  border-radius: 80px 80px 0 0;
+  left: 66%;
+  top: 43.5%;
+}
+
+.ears {
+  background-color: rgb(192, 118, 95);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 80px 80px 0 0;
+  left: 70%;
+  top: 40%;
+}
+.ears::after {
+  content: "";
+  background-color: rgb(192, 118, 95);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 80px 80px 0 0;
+  transform: translateX(30px);
+}
+
+.eyes {
+  border: 4px solid black;
+  border-top: none;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  border-radius: 0 0 80px 80px;
+  left: 71.5%;
+  top: 48%;
+}
+
+.eyes::after {
+  content: "";
+  border: 4px solid black;
+  border-top: none;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  border-radius: 0 0 80px 80px;
+  transform: translateX(30px);
+}
+
+.nose {
+  background-color: rgb(211, 194, 191);
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  border-radius: 80px;
+  left: 74%;
+  top: 52%;
+}
+
+.nose::after {
+  content: "";
+  background-color: rgb(211, 194, 191);
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  border-radius: 80px;
+  transform: translateX(10px);
+}
+
+@keyframes mouth_a {
+  50% {
+    transform: scaleY(0.7);
+  }
+}
+
+.mouth {
+  background-color: rgb(36, 31, 30);
+  width: 32px;
+  height: 25px;
+  position: absolute;
+  border-radius: 0 0 80px 80px;
+  left: 74.5%;
+  top: 54%;
+  transform-origin: top;
+  animation-name: mouth_a;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: backwards;
+}
+
+.tail {
+  background-color: rgb(153, 65, 49);
+  width: 350px;
+  height: 60px;
+  position: absolute;
+  border-radius: 80px;
+  left: 12%;
+  top: 51%;
+}
+
+@keyframes nose_a {
+  50% {
+    transform: scale(0.7);
+  }
+}
+
+.blub {
+  background-color: rgba(216, 214, 214, 0.5);
+  width: 60px;
+  height: 40px;
+  position: absolute;
+  border-radius: 80px 80px 80px 0;
+  left: 80%;
+  top: 50%;
+  transform-origin: top;
+  animation-name: nose_a;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: backwards;
+}
+
+.shadow {
+  background-color: rgba(3, 3, 24, 0.5);
+  width: 760px;
+  height: 50px;
+  position: absolute;
+  border-radius: 0 0 150px 150px;
+  left: 10%;
+  top: 56%;
+}
+
+@keyframes cursor_a {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.8);
+  }
+}
+
+.cursor {
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transition-timing-function: ease-out;
+  animation: cursor_a 1s infinite alternate;
+}
+
+.cursor::after {
+  content: "";
+  border: 30px solid white;
+  width: 90px;
+  height: 90px;
+  opacity: 0.3;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  transition-timing-function: ease-out;
+  animation: cursor_a 1s infinite alternate;
+}
